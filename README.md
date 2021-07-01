@@ -18,5 +18,9 @@ Result will shown after usder finish the game. User will be able to log their sc
 
 All the logged scores can be viewed from "View Scores"
 
-## Deployed Page
+## Completed Website
+ Below is the home page of the quiz website
+![alt The home page of a quiz website](assets/images/HomePage.png)
 
+## Deployed URL
+[Access the link here](https://yingliii.github.io/Daily-Quiz/)

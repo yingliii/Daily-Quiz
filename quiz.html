@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/Daily-Quiz/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/Daily-Quiz/assets/css/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <title>Daily Quiz</title>
+</head>
+<body>
+    <header>
+      <h1 class="title" >Coding Quiz</h1>
+      <nav>
+        <ul class="navbar">
+          <a href="/Daily-Quiz/index.html"><li class="home">Home</li></a>
+          <a href="#"><li class="view-scores">View Scores</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="quiz-box">
+          <div id="question" class="question"></div>
+          <div class="choice-container">
+            <p class="choice-prefix">A. </p>
+            <p class="choice-text" data-number="1"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">B. </p>
+            <p class="choice-text" data-number="2"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">C. </p>
+            <p class="choice-text" data-number="3"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">D. </p>
+            <p class="choice-text" data-number="4"></p>
+          </div>
+          <p id="answer" class="answer"></p>
+      </section>
+
+      <div class="timer-box">
+        <h3>Time left<br>
+          (in second):</h3>
+        <div class="time-left">30</div>
+      </div>
+    </main>
+    <script src="/Daily-Quiz/assets/js/quiz.js"></script>
+</body>
+</html>   

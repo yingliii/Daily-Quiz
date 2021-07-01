@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 header {
     padding: 20px;
     background-color: rgb(63, 53, 74);
@@ -9,8 +8,23 @@ header {
     display: flex;
     justify-content: space-between;
 }
-header p {
+.title {
+    font-family: 'Monoton', cursive;
+}
+nav {
     align-self: flex-end;
+}
+.navbar {
+    list-style: none;
+}
+.navbar li {
+    display: inline-block;
+    margin-left: 20px;
+    color: white;
+}
+
+.navbar:hover {
+    cursor: pointer;
 }
 
 main {
@@ -20,7 +34,7 @@ main {
     align-items: baseline;
 }
 
-.quiz-box {
+.start-box {
     width: 400px;
     height: 420px;
     padding: 30px;
@@ -34,17 +48,30 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
-.quiz-box p {
+.start-title {
+    margin-left: -25px;
+}
+.start-text {
     padding: 0 30px;
     line-height: 25px;
 }
-.quiz-box button {
+.start-btn {
     width: 80px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(63, 53, 74);
+    height: 30px;
+    border-style: solid;
+    border-color: rgb(63, 53, 74);
+    color: rgb(63, 53, 74);
+    font-weight: bolder;
+    background-color: white;
+}
+.start-btn:hover {
+    cursor: pointer;
     color: white;
+    background-color: rgb(185, 173, 198);
+    border: none;
+    box-shadow: 0 0.5rem 1.2rem 0 mediumpurple;
+    transition: transform 150ms;
+    transform: scale(1.03);
 }
 
 .timer-box {
@@ -58,3 +85,6 @@ main {
     font-size: 1rem;
 }
 
+.hidden {
+    display: none;
+}

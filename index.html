@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/Daily-Quiz/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
       <h1 class="title" >Coding Quiz</h1>
       <nav>
         <ul class="navbar">
-          <a href="/Daily-Quiz/index.html"><li class="home">Home</li></a>
+          <a href="index.html"><li class="home">Home</li></a>
           <a href="#"><li class="view-scores">View Scores</li></a>
         </ul>
       </nav>
@@ -24,17 +24,30 @@
     <main>
       <section class="start-box">
         <h2 class="start-title">Welcome to the coding quiz</h2>
-        <p class="start-text">You will have 30s to answer 5 questions. Two second will be deducted for each incorrect answer.<br>
+        <p class="start-text">You will have 30s to answer 5 questions.<br>
           <br>
         Click the "Let's Go" to start the quiz!<br></p>
-        <a href="/Daily-Quiz/quiz.html"><button class="start-btn" >Let's Go</button></a>
+        <button id="start-btn" class="start-btn">Let's Go</button>
       </section>
 
+      <div id="question-container" class="quiz-box hide">
+            <div id="question">Question</div>
+            <div id="answer-btn" class = "btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <div id="evaluation" class="evaluation">Correct/Wrong</div>
+            <button id="next-btn" >Next</button>
+        </div>
+
       <section class="timer-box">
-        <h3>Time left<br>
+        <h3 id="timer-text">Timer<br>
           (in second):</h3>
         <div class="time-left">30</div>
       </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

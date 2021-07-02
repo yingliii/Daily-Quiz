@@ -1,9 +1,13 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --dark-purple: rgb(63, 53, 74);
+}
+
 header {
-    padding: 20px;
-    background-color: rgb(63, 53, 74);
+    padding: 0 20px;
+    background-color: var(--dark-purple);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -35,13 +39,13 @@ main {
 }
 
 .start-box {
-    width: 400px;
-    height: 420px;
+    width: 500px;
+    height: 380px;
     padding: 30px;
     /*background-color: rgb(185, 173, 198);
     border: none;
     border-radius: 12px;*/
-    color: rgb(63, 53, 74);
+    color: var(--dark-purple);
     margin: 30px;
     display: flex;
     flex-direction: column;
@@ -59,8 +63,8 @@ main {
     width: 80px;
     height: 30px;
     border-style: solid;
-    border-color: rgb(63, 53, 74);
-    color: rgb(63, 53, 74);
+    border-color: var(--dark-purple);
+    color: var(--dark-purple);
     font-weight: bolder;
     background-color: white;
 }
@@ -70,10 +74,9 @@ main {
     background-color: rgb(185, 173, 198);
     border: none;
     box-shadow: 0 0.5rem 1.2rem 0 mediumpurple;
-    transition: transform 150ms;
-    transform: scale(1.03);
 }
 
+/*for timer*/
 .timer-box {
     color: rgb(63, 53, 74);
 }
@@ -86,5 +89,47 @@ main {
 }
 
 .hidden {
+    display: none;
+}
+
+
+/*for quiz box*/
+.quiz-box {
+    width: 500px;
+    height: 380px;
+    padding: 30px;
+    background-color: rgb(202, 193, 211);
+    border: none;
+    border-radius: 30px;
+    color: black;
+    margin: 100px;
+}
+.btn-grid {
+    display: grid;
+    margin: 25px;
+    gap: 10px;
+}
+
+/*style each answer btn*/
+.btn {
+    padding: 15px;
+    border: none;
+    background-color: rgb(245, 247, 224);
+    text-align: left;
+}
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1.2rem 0 mediumpurple;
+}
+.btn.correct {
+    background-color: rgb(168, 240, 174);
+    color: var(--dark-purple);
+}
+
+.btn.wrong {
+    background-color: rgb(241, 170, 170);
+    color: var(--dark-purple);
+}
+.hide {
     display: none;
 }

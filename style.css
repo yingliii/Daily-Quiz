@@ -42,9 +42,6 @@ main {
     width: 500px;
     height: 380px;
     padding: 30px;
-    /*background-color: rgb(185, 173, 198);
-    border: none;
-    border-radius: 12px;*/
     color: var(--dark-purple);
     margin: 30px;
     display: flex;
@@ -129,7 +126,21 @@ main {
 .btn.wrong {
     background-color: rgb(241, 170, 170);
     color: var(--dark-purple);
+    
 }
+
+.next-btn {
+    background-color: rgb(245, 247, 224);
+    padding: 5px 10px;
+    margin-left: 350px;
+    border: none;
+    border-radius: 5px;
+}
+.next-btn:hover {
+    background-color: var(--dark-purple);
+    color: rgb(245, 247, 224);
+}
+
 .hide {
     display: none;
 }

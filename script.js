@@ -5,6 +5,7 @@ const questionContainer = document.getElementById('question-container')
 let shuffledQuestions, currentQuestionIndex
 const questionElement = document.getElementById('question')
 const answerButtons = document.getElementById('answer-btn')
+const evaluation = document.querySelector('#evaluation')
 
 start.addEventListener('click', startGame)
 
@@ -60,6 +61,7 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct)
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        await sleep(2000);
         next.classList.remove('hide')
     } else {
         start.innerText = 'Restart'
@@ -85,6 +87,7 @@ function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
 
 const questions = [
     {

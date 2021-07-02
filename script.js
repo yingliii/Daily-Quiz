@@ -61,7 +61,6 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct)
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        await sleep(2000);
         next.classList.remove('hide')
     } else {
         start.innerText = 'Restart'

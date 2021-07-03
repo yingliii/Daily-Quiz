@@ -31,21 +31,31 @@
       </section>
 
       <div id="question-container" class="quiz-box hide">
-            <div id="question">Question</div>
-            <div id="answer-btn" class = "btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
-            <div id="evaluation" class="evaluation"></div>
-            <button id="next-btn" class="next-btn">Next</button>
+        <div id="question">Question</div>
+        <div id="answer-btn" class = "btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
         </div>
+        <div id="evaluation" class="evaluation"></div>
+        <button id="next-btn" class="next-btn">Next</button>
+      </div>
+
+      <div class="log-score hide">
+        <p class="score-text">Your Score</p>
+        <p class="score">0</p>
+        <div class="userName">
+          <input type="text" class="name" placeholder="Your initial">
+        </div>
+        <p>Enter your initial to store your score!</p>
+        <button class="submit">Submit</button>
+      </div>
 
       <section class="timer-box">
         <h3 id="timer-text">Timer<br>
           (in second):</h3>
-        <div class="time-left">30</div>
+        <div class="countdown">01:00</div>
       </section>
     </main>
     <script src="script.js"></script>

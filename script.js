@@ -6,6 +6,8 @@ let shuffledQuestions, currentQuestionIndex
 const questionElement = document.getElementById('question')
 const answerButtons = document.getElementById('answer-btn')
 const evaluation = document.querySelector('#evaluation')
+const logScore = document.querySelector('.log-score')
+
 
 start.addEventListener('click', startGame)
 
@@ -13,6 +15,8 @@ next.addEventListener('click',() => {
     currentQuestionIndex++
     getNextQuestion()
 })
+
+
 
 
 function startGame() {
@@ -23,12 +27,32 @@ function startGame() {
     currentQuestionIndex = 0
     questionContainer.classList.remove('hide')
     getNextQuestion()
+    startTimer()
 }
 
 function getNextQuestion() {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
+
+//set up timer
+function startTimer() {
+    const timerText = document.querySelector('.countdown');
+    let timeSecond = 30;
+
+    timerText.innerHTML = `00:${timeSecond}`;
+
+    const countdown = setInterval (() => {
+    timeSecond--;
+    timerText.innerHTML = `00:${timeSecond}`;
+    if(timeSecond <= 0 || timeSecond<1) {
+        clearInterval(countdown)
+        //this part have issue
+    }
+    }, 1000)
+}
+
+
 
 function showQuestion(question) {
     questionElement.innerText = question.question
@@ -60,17 +84,20 @@ function selectAnswer(e) {
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         next.classList.remove('hide')
+        
     } else {
-        start.innerText = 'Restart'
-        start.classList.remove('hide')
-        startBox.classList.remove('hide')
-        questionContainer.classList.add('hide')
+        setTimeout('whenFinish()', 1000);
     }
-    //22
-    next.classList.remove('hide')
 }
+
+function whenFinish() {
+    questionContainer.classList.add('hide')
+    logScore.classList.remove('hide')
+}
+
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -81,11 +108,11 @@ function setStatusClass(element, correct) {
     }
 }
 
-//21
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
 
 
 const questions = [
@@ -135,3 +162,4 @@ const questions = [
         ]
     },
 ]
+
